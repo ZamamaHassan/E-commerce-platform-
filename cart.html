@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Cart | Brand</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <!-- ===== TOP BAR ===== -->
+    <header class="top-bar">
+      <div class="top-bar-inner">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div class="hamburger" id="mobile-menu-btn" style="display: none; cursor: pointer;">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <a href="index.html" style="text-decoration: none; color: inherit;">
+            <div class="logo">
+              <div class="logo-icon">B</div>
+              <span>Brand</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="search-bar-wrap">
+          <input class="search-input" type="text" placeholder="Search" />
+          <select class="search-select">
+            <option>All category</option>
+            <option>Electronics</option>
+            <option>Home</option>
+            <option>Fashion</option>
+          </select>
+          <button class="search-btn">Search</button>
+        </div>
+
+        <div class="top-links">
+          <div>English, USD</div>
+          <div>Ship to 🇩🇪</div>
+        </div>
+
+        <div class="top-icons">
+          <div class="top-icon-item">
+            <div class="top-icon-circle">👤</div>
+            <span class="top-icon-label">Profile</span>
+          </div>
+          <div class="top-icon-item">
+            <div class="top-icon-circle">💬</div>
+            <span class="top-icon-label">Message</span>
+          </div>
+          <div class="top-icon-item">
+            <div class="top-icon-circle">📦</div>
+            <span class="top-icon-label">Orders</span>
+          </div>
+          <div class="top-icon-item">
+            <div class="top-icon-circle">🛒</div>
+            <span class="top-icon-label">My cart <span class="cart-badge">3</span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main">
+      <div class="container">
+        <h1 class="cart-title">My cart (3)</h1>
+        
+        <div class="cart-layout">
+          <!-- LEFT: Cart Items -->
+          <div class="cart-items">
+            <div class="cart-item">
+              <img src="assets/Layout/alibaba/Image/cloth/Bitmap.png" alt="Product" class="cart-item-image" />
+              <div class="cart-item-details">
+                <div class="cart-item-name">T-shirts with multiple colors, for men and lady</div>
+                <div class="cart-item-attributes">Size: medium, Color: blue, Material: Plastic</div>
+                <div class="cart-item-seller">Seller: Artel Market</div>
+                <div class="cart-item-actions">
+                  <a href="#" class="cart-action-remove">Remove</a>
+                  <a href="#" class="cart-action-save">Save for later</a>
+                </div>
+              </div>
+              <div class="cart-item-qty">
+                <label>Qty:</label>
+                <select>
+                  <option>1</option>
+                  <option>2</option>
+                  <option selected>9</option>
+                  <option>10</option>
+                </select>
+              </div>
+              <div class="cart-item-price">$78.99</div>
+            </div>
+
+            <div class="cart-item">
+              <img src="assets/Layout/alibaba/Image/cloth/image 30.png" alt="Product" class="cart-item-image" />
+              <div class="cart-item-details">
+                <div class="cart-item-name">T-shirts with multiple colors, for men and lady</div>
+                <div class="cart-item-attributes">Size: medium, Color: blue, Material: Plastic</div>
+                <div class="cart-item-seller">Seller: Best factory LLC</div>
+                <div class="cart-item-actions">
+                  <a href="#" class="cart-action-remove">Remove</a>
+                  <a href="#" class="cart-action-save">Save for later</a>
+                </div>
+              </div>
+              <div class="cart-item-qty">
+                <label>Qty:</label>
+                <select>
+                  <option>1</option>
+                  <option>2</option>
+                  <option selected>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+              <div class="cart-item-price">$39.00</div>
+            </div>
+
+            <div class="cart-item">
+              <img src="assets/Layout/alibaba/Image/cloth/Bitmap.png" alt="Product" class="cart-item-image" />
+              <div class="cart-item-details">
+                <div class="cart-item-name">T-shirts with multiple colors, for men and lady</div>
+                <div class="cart-item-attributes">Size: medium, Color: blue, Material: Plastic</div>
+                <div class="cart-item-seller">Seller: Artel Market</div>
+                <div class="cart-item-actions">
+                  <a href="#" class="cart-action-remove">Remove</a>
+                  <a href="#" class="cart-action-save">Save for later</a>
+                </div>
+              </div>
+              <div class="cart-item-qty">
+                <label>Qty:</label>
+                <select>
+                  <option selected>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+              </div>
+              <div class="cart-item-price">$170.50</div>
+            </div>
+
+            <div class="cart-bottom-actions">
+              <button class="cart-back-btn">← Back to shop</button>
+              <a href="#" class="cart-remove-all">Remove all</a>
+            </div>
+
+            <div class="cart-services">
+              <div class="cart-service">
+                <span class="service-icon">🔒</span>
+                <div>
+                  <div class="service-title">Secure payment</div>
+                  <div class="service-desc">Have you ever finally just</div>
+                </div>
+              </div>
+              <div class="cart-service">
+                <span class="service-icon">💬</span>
+                <div>
+                  <div class="service-title">Customer support</div>
+                  <div class="service-desc">Have you ever finally just</div>
+                </div>
+              </div>
+              <div class="cart-service">
+                <span class="service-icon">🚚</span>
+                <div>
+                  <div class="service-title">Free delivery</div>
+                  <div class="service-desc">Have you ever finally just</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Order Summary -->
+          <div class="cart-summary">
+            <div class="summary-card">
+              <div class="summary-coupon">
+                <input type="text" placeholder="Add coupon" />
+                <button class="coupon-btn">Apply</button>
+              </div>
+
+              <div class="summary-totals">
+                <div class="summary-row">
+                  <span>Subtotal</span>
+                  <span>$1403.97</span>
+                </div>
+                <div class="summary-row discount">
+                  <span>Discount</span>
+                  <span>-$60.00</span>
+                </div>
+                <div class="summary-row tax">
+                  <span>Tax</span>
+                  <span>+$14.00</span>
+                </div>
+                <div class="summary-row total">
+                  <span>Total</span>
+                  <span>$1357.97</span>
+                </div>
+              </div>
+
+              <button class="checkout-btn">Checkout</button>
+
+              <div class="payment-methods">
+                <span class="payment-icon">💳</span>
+                <span class="payment-icon">💳</span>
+                <span class="payment-icon">💳</span>
+                <span class="payment-icon">📱</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Saved for later -->
+        <div class="saved-for-later">
+          <h2 class="saved-title">Saved for later</h2>
+          <div class="saved-grid">
+            <div class="saved-card">
+              <img src="assets/Image/tech/image 30.png" alt="Product" />
+              <div class="saved-price">$99.50</div>
+              <div class="saved-name">GoPro HERO6 4K Action Camera - Black</div>
+              <button class="saved-move-btn">🛒 Move to cart</button>
+            </div>
+            <div class="saved-card">
+              <img src="assets/Image/tech/image 23.png" alt="Product" />
+              <div class="saved-price">$99.50</div>
+              <div class="saved-name">GoPro HERO6 4K Action Camera - Black</div>
+              <button class="saved-move-btn">🛒 Move to cart</button>
+            </div>
+            <div class="saved-card">
+              <img src="assets/Image/tech/8.png" alt="Product" />
+              <div class="saved-price">$99.50</div>
+              <div class="saved-name">GoPro HERO6 4K Action Camera - Black</div>
+              <button class="saved-move-btn">🛒 Move to cart</button>
+            </div>
+            <div class="saved-card">
+              <img src="assets/Image/tech/image 34.png" alt="Product" />
+              <div class="saved-price">$99.50</div>
+              <div class="saved-name">GoPro HERO6 4K Action Camera - Black</div>
+              <button class="saved-move-btn">🛒 Move to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="footer-logo-icon">🛒</div>
+              <span>Brand</span>
+            </div>
+            <p class="footer-desc">Best information about the company gies here but now lorem ipsum is</p>
+            <div class="footer-social">
+              <a href="#" class="social-icon">📘</a>
+              <a href="#" class="social-icon">🐦</a>
+              <a href="#" class="social-icon">💼</a>
+              <a href="#" class="social-icon">📷</a>
+              <a href="#" class="social-icon">📺</a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">About</h3>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Find store</a></li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Partnership</h3>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Find store</a></li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Information</h3>
+            <ul class="footer-links">
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Money Refund</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">For users</h3>
+            <ul class="footer-links">
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Register</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">My Orders</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Get app</h3>
+            <div class="footer-apps">
+              <a href="#" class="app-btn">
+                <span class="app-icon">▶️</span>
+                <div>
+                  <div class="app-label">GET IT ON</div>
+                  <div class="app-name">Google Play</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copyright">© 2023 Ecommerce.</div>
+          <div class="footer-lang">
+            <span>English</span>
+            <span>🇺🇸</span>
+            <span>▲</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ===== MOBILE MENU SIDEBAR ===== -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+  <div class="mobile-menu-sidebar" id="mobile-menu-sidebar">
+    <div class="mobile-menu-header">
+      <div class="mobile-menu-user">
+        <div class="mobile-user-icon">👤</div>
+        <div class="mobile-user-text">Sign in | Register</div>
+      </div>
+      <button class="mobile-menu-close" id="mobile-menu-close">✕</button>
+    </div>
+    
+    <div class="mobile-menu-section">
+      <a href="index.html" class="mobile-menu-item">
+        <span class="mobile-menu-icon">🏠</span>
+        <span>Home</span>
+      </a>
+      <a href="categories-gridview.html" class="mobile-menu-item">
+        <span class="mobile-menu-icon">☰</span>
+        <span>Categories</span>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span class="mobile-menu-icon">❤️</span>
+        <span>Favorites</span>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span class="mobile-menu-icon">🗑️</span>
+        <span>My orders</span>
+      </a>
+    </div>
+
+    <div class="mobile-menu-divider"></div>
+
+    <div class="mobile-menu-section">
+      <a href="#" class="mobile-menu-item">
+        <span class="mobile-menu-icon">🌐</span>
+        <span>English | USD</span>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span class="mobile-menu-icon">🎧</span>
+        <span>Contact us</span>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span class="mobile-menu-icon">🏢</span>
+        <span>About</span>
+      </a>
+    </div>
+
+    <div class="mobile-menu-divider"></div>
+
+    <div class="mobile-menu-section mobile-menu-footer">
+      <a href="#" class="mobile-menu-link">User agreement</a>
+      <a href="#" class="mobile-menu-link">Partnership</a>
+      <a href="#" class="mobile-menu-link">Privacy policy</a>
+    </div>
+  </div>
+</body>
+</html>
+

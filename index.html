@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Brand – E‑commerce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <!-- ===== TOP BAR ===== -->
+    <header class="top-bar">
+      <div class="top-bar-inner">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+          <div class="logo">
+            <div class="logo-icon">B</div>
+            <span>Brand</span>
+          </div>
+        </a>
+
+        <div class="search-bar-wrap">
+          <input
+            class="search-input"
+            type="text"
+            placeholder="Search"
+          />
+          <select class="search-select">
+            <option>All category</option>
+            <option>Electronics</option>
+            <option>Home</option>
+            <option>Fashion</option>
+          </select>
+          <button class="search-btn">Search</button>
+        </div>
+
+        <div class="top-links">
+          <div>English, USD</div>
+          <div>Ship to 🇩🇪</div>
+        </div>
+
+        <div class="top-icons">
+          <div class="top-icon-item">
+            <div class="top-icon-circle">👤</div>
+            <span class="top-icon-label">Profile</span>
+          </div>
+          <div class="top-icon-item">
+            <div class="top-icon-circle">💬</div>
+            <span class="top-icon-label">Message</span>
+          </div>
+          <div class="top-icon-item">
+            <div class="top-icon-circle">📦</div>
+            <span class="top-icon-label">Orders</span>
+          </div>
+          <div class="top-icon-item">
+            <a href="cart.html" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; color: inherit;">
+              <div class="top-icon-circle">🛒</div>
+              <span class="top-icon-label">My cart</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== NAV BAR ===== -->
+    <nav class="nav-bar">
+      <div class="container nav-inner">
+        <div class="nav-left">
+          <div class="nav-all-cat">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <a href="categories-gridview.html" style="text-decoration: none; color: inherit;"><span>All category</span></a>
+          </div>
+        </div>
+        <div class="nav-middle">
+          <a href="#">Hot offers</a>
+          <a href="#">Gift boxes</a>
+          <a href="#">Projects</a>
+          <a href="#">Menu item</a>
+          <a href="#">Help</a>
+        </div>
+        <div class="nav-right">
+          <span>Ship to</span>
+          <span>🇩🇪</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main">
+      <div class="container">
+        <div class="main-grid">
+          <!-- LEFT CATEGORIES -->
+          <aside class="categories">
+            <div class="cat-item active"><span>Automobiles</span></div>
+            <div class="cat-item"><span>Clothes and wear</span></div>
+            <div class="cat-item"><span>Home interiors</span></div>
+            <a href="categories-gridview.html" style="text-decoration: none; color: inherit;">
+              <div class="cat-item"><span>Computer and tech</span></div>
+            </a>
+            <div class="cat-item"><span>Tools, equipments</span></div>
+            <div class="cat-item"><span>Sports and outdoor</span></div>
+            <div class="cat-item"><span>Animal and pets</span></div>
+            <div class="cat-item"><span>Machinery tools</span></div>
+            <div class="cat-item"><span>More category</span></div>
+          </aside>
+
+          <!-- CENTER HERO -->
+          <section class="hero">
+            <div class="hero-text">
+              <div class="hero-kicker">Latest trending</div>
+              <h1 class="hero-title">Electronic items</h1>
+              <button class="hero-btn">Learn more</button>
+            </div>
+            <div class="hero-image">
+              <div class="hero-circle"></div>
+              <div class="hero-gadgets"></div>
+            </div>
+          </section>
+
+          <!-- RIGHT CARDS -->
+          <div class="right-column">
+            <div class="user-card">
+              <div class="user-card-header">
+                <div class="user-avatar">U</div>
+                <div>
+                  <div class="user-txt-top">Hi, user</div>
+                  <div class="user-txt-name">Let’s get started</div>
+                </div>
+              </div>
+              <div class="user-card-actions">
+                <button class="btn-primary">Join now</button>
+                <button class="btn-outline">Log in</button>
+              </div>
+            </div>
+
+            <div class="coupon-card">
+              <div class="coupon-title">Get US $10 off</div>
+              <div class="coupon-sub">With a new supplier</div>
+            </div>
+
+            <div class="quote-card">
+              <div class="quote-title">Send quotes with</div>
+              <div class="quote-sub">Supplier preferences</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DEALS SECTION -->
+        <section class="section" style="margin-top: 18px;">
+          <div class="section-header">
+            <div>
+              <div class="section-title">Deals and offers</div>
+              <div class="section-sub">Hygiene equipments</div>
+            </div>
+            <div>
+              <div class="timer">
+                <div class="timer-box">04</div>
+                <div class="timer-box">13</div>
+                <div class="timer-box">34</div>
+                <div class="timer-box">56</div>
+              </div>
+              <div class="timer-labels">
+                <span>Days</span>
+                <span>Hour</span>
+                <span>Min</span>
+                <span>Sec</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="products-row">
+            <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+              <article class="product-card">
+                <div class="product-image">
+                  <img src="assets/Image/tech/8.png" alt="Smart watch" />
+                </div>
+                <div class="product-name">Smart watches</div>
+                <div class="product-badge">-25%</div>
+              </article>
+            </a>
+
+            <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+              <article class="product-card">
+                <div class="product-image">
+                  <img src="assets/Image/tech/image 34.png" alt="Laptops" />
+                </div>
+                <div class="product-name">Laptops</div>
+                <div class="product-badge">-15%</div>
+              </article>
+            </a>
+
+            <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+              <article class="product-card">
+                <div class="product-image">
+                  <img src="assets/Image/tech/image 32.png" alt="GoPro cameras" />
+                </div>
+                <div class="product-name">Phone</div>
+                <div class="product-badge">-40%</div>
+              </article>
+            </a>
+
+            <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+              <article class="product-card">
+                <div class="product-image">
+                  <img src="assets/Image/tech/image 29.png" alt="Headphones" />
+                </div>
+                <div class="product-name">Headphones</div>
+                <div class="product-badge">-25%</div>
+              </article>
+            </a>
+
+            <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+              <article class="product-card">
+                <div class="product-image">
+                  <img src="assets/Image/tech/image 23.png" alt="Canon cameras" />
+                </div>
+                <div class="product-name">Smart phone</div>
+                <div class="product-badge">-25%</div>
+              </article>
+            </a>
+          </div>
+        </section>
+
+        <!-- MULTI CATEGORY (HOME & OUTDOOR + CONSUMER ELECTRONICS) -->
+        <section class="multi-category">
+          <!-- Row 1: Home and outdoor -->
+          <div class="multi-row">
+            <div
+              class="multi-row-banner"
+              style="background-image: url('assets/Image/backgrounds/Group 969.png');"
+            >
+              <div class="multi-row-banner-content">
+                <div class="multi-row-title">Home and outdoor</div>
+                <div class="multi-row-sub">Best products for your home</div>
+              </div>
+              <a href="categories-gridview.html"><button class="multi-row-btn">Source now</button></a>
+            </div>
+
+            <div class="multi-row-grid">
+              <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+                <div class="multi-cell">
+                  <div class="multi-cell-img">
+                    <img src="assets/Image/interior/1.png" alt="Arm chairs" />
+                  </div>
+                  <div class="multi-cell-title">Arm chairs</div>
+                  <div class="multi-cell-sub">From USD 19</div>
+                </div>
+              </a>
+              <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+                <div class="multi-cell">
+                  <div class="multi-cell-img">
+                    <img src="assets/Image/interior/image 93.png" alt="Air mattress" />
+                  </div>
+                  <div class="multi-cell-title">Air mattress</div>
+                  <div class="multi-cell-sub">From USD 19</div>
+                </div>
+              </a>
+              <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+                <div class="multi-cell">
+                  <div class="multi-cell-img">
+                    <img src="assets/Image/interior/3.png" alt="Pot" />
+                  </div>
+                  <div class="multi-cell-title">Pot</div>
+                  <div class="multi-cell-sub">From USD 19</div>
+                </div>
+              </a>
+              <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+                <div class="multi-cell">
+                  <div class="multi-cell-img">
+                    <img src="assets/Image/interior/7.png" alt="Magazine rack" />
+                  </div>
+                  <div class="multi-cell-title">Magazine rack</div>
+                  <div class="multi-cell-sub">From USD 19</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: Consumer electronics and gadgets -->
+          <div class="multi-row">
+            <div
+              class="multi-row-banner"
+              style="background-image: url('assets/Image/backgrounds/Group 970.png');"
+            >
+              <div class="multi-row-banner-content">
+                <div class="multi-row-title">Consumer electronics and gadgets</div>
+              </div>
+              <button class="multi-row-btn">Source now</button>
+            </div>
+
+            <div class="multi-row-grid">
+              <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+                <div class="multi-cell">
+                  <div class="multi-cell-img">
+                    <img src="assets/Image/tech/image 33.png" alt="Cameras" />
+                  </div>
+                  <div class="multi-cell-title">Cameras</div>
+                  <div class="multi-cell-sub">From USD 89</div>
+                </div>
+              </a>
+              <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+                <div class="multi-cell">
+                  <div class="multi-cell-img">
+                    <img src="assets/Image/tech/image 35.png" alt="Headphones" />
+                  </div>
+                  <div class="multi-cell-title">Headphones</div>
+                  <div class="multi-cell-sub">From USD 10</div>
+                </div>
+              </a>
+              <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+                <div class="multi-cell">
+                  <div class="multi-cell-img">
+                    <img src="assets/Image/tech/image 31.png" alt="Electric kettle" />
+                  </div>
+                  <div class="multi-cell-title">Electric kettle</div>
+                  <div class="multi-cell-sub">From USD 90</div>
+                </div>
+              </a>
+              <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+                <div class="multi-cell">
+                  <div class="multi-cell-img">
+                    <img src="assets/Image/tech/image 30.png" alt="Tablet" />
+                  </div>
+                  <div class="multi-cell-title">Tablets</div>
+                  <div class="multi-cell-sub">From USD 249</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- QUOTE REQUEST SECTION -->
+        <section class="rfq-section">
+          <div class="container">
+            <div class="rfq-inner">
+              <div>
+                <h2 class="rfq-left-title">An easy way to send requests to all suppliers</h2>
+                <p class="rfq-left-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+              <div class="rfq-form-card">
+                <div class="rfq-form-title">Send quote to suppliers</div>
+                <div class="rfq-field">
+                  <input type="text" class="rfq-input" placeholder="What item you need?" />
+                </div>
+                <div class="rfq-field">
+                  <textarea class="rfq-textarea" placeholder="Type more details"></textarea>
+                </div>
+                <div class="rfq-qty-row">
+                  <input type="text" class="rfq-input" placeholder="Quantity" />
+                  <select class="rfq-select">
+                    <option>Pcs</option>
+                  </select>
+                </div>
+                <button class="rfq-submit-btn">Send inquiry</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RECOMMENDED ITEMS SECTION -->
+        <section class="section" style="margin-top: 18px;">
+          <div class="section-header">
+            <div>
+              <div class="section-title">Recommended items</div>
+            </div>
+          </div>
+          <div class="recommended-grid">
+            <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+              <article class="recommended-card">
+                <div class="recommended-image">
+                  <img src="assets/Layout/alibaba/Image/cloth/Bitmap.png" alt="Polo shirt" />
+                </div>
+                <div class="recommended-price">$10.30</div>
+                <div class="recommended-desc">T-shirts with multiple colors, for men</div>
+              </article>
+            </a>
+
+            <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+              <article class="recommended-card">
+                <div class="recommended-image">
+                  <img src="assets/Layout/alibaba/Image/cloth/2 1.png" alt="Winter jacket" />
+                </div>
+                <div class="recommended-price">$10.30</div>
+                <div class="recommended-desc">Jeans shorts for men blue color</div>
+              </article>
+            </a>
+
+            <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+              <article class="recommended-card">
+                <div class="recommended-image">
+                  <img src="assets/Layout/alibaba/Image/cloth/image 30.png" alt="Blue blazer" />
+                </div>
+                <div class="recommended-price">$12.50</div>
+                <div class="recommended-desc">Blue winter coat medium size</div>
+              </article>
+            </a>
+
+            <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+              <article class="recommended-card">
+                <div class="recommended-image">
+                  <img src="assets/Layout/alibaba/Image/cloth/Bitmap (2).png" alt="Denim shorts" />
+                </div>
+                <div class="recommended-price">$9.99</div>
+                <div class="recommended-desc">Blue shorts</div>
+              </article>
+            </a>
+
+            <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+              <article class="recommended-card">
+                <div class="recommended-image">
+                  <img src="assets/Layout/alibaba/Image/cloth/image 26.png" alt="Headphones" />
+                </div>
+                <div class="recommended-price">$8.99</div>
+                <div class="recommended-desc">Blue bagpack</div>
+              </article>
+            </a>
+
+            <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+              <article class="recommended-card">
+                <div class="recommended-image">
+                  <img src="assets/Layout/alibaba/Image/cloth/image 24.png" alt="Blue wallet" />
+                </div>
+                <div class="recommended-price">$34.00</div>
+                <div class="recommended-desc">Blue wallet</div>
+              </article>
+            </a>
+
+            <a href="product-detail.html" style="text-decoration: none; color: inherit;">
+              <article class="recommended-card">
+                <div class="recommended-image">
+                  <img src="assets/Layout/alibaba/Image/cloth/image 27.png" alt="Denim backpack" />
+                </div>
+                <div class="recommended-price">$99.00</div>
+                <div class="recommended-desc">Leather wallet</div>
+              </article>
+            </a>
+          </div>
+        </section>
+
+        <!-- EXTRA SERVICES SECTION -->
+        <section class="services-section">
+          <div class="container">
+            <div class="services-title">Our extra services</div>
+            <div class="services-grid">
+              <div class="service-card">
+                <div class="service-image">
+                  <img src="assets/Image/backgrounds/Mask group.png" alt="Warehouse" />
+                </div>
+                <div class="service-icon">🔍</div>
+                <div class="service-name">Source from Industry Hubs</div>
+              </div>
+
+              <div class="service-card">
+                <div class="service-image">
+                  <img src="assets/Image/backgrounds/Mask group (1).png" alt="Color palette" />
+                </div>
+                <div class="service-icon">📝</div>
+                <div class="service-name">Customize Your Products</div>
+              </div>
+
+              <div class="service-card">
+                <div class="service-image">
+                  <img src="assets/Image/backgrounds/image 106.png" alt="Shipping" />
+                </div>
+                <div class="service-icon">✈️</div>
+                <div class="service-name">Fast, reliable shipping by ocean or air</div>
+              </div>
+
+              <div class="service-card">
+                <div class="service-image">
+                  <img src="assets/Image/backgrounds/image 107.png" alt="Inspection" />
+                </div>
+                <div class="service-icon">🛡️</div>
+                <div class="service-name">Product monitoring and inspection</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SUPPLIERS BY REGION -->
+        <section class="suppliers-section">
+          <div class="container">
+            <div class="suppliers-title">Suppliers by region</div>
+            <div class="suppliers-grid">
+              <div class="supplier-item">
+                <img src="assets/Layout1/Image/flags/AE@2x.png" alt="UAE flag" class="supplier-flag" />
+                <div>
+                  <div class="supplier-country">Arabic Emirates</div>
+                  <div class="supplier-url">shopname.ae</div>
+                </div>
+              </div>
+              <div class="supplier-item">
+                <img src="assets/Layout1/Image/flags/icon.png" alt="Australia flag" class="supplier-flag" />
+                <div>
+                  <div class="supplier-country">Australia</div>
+                  <div class="supplier-url">shopname.ae</div>
+                </div>
+              </div>
+              <div class="supplier-item">
+                <img src="assets/Layout1/Image/flags/US@2x.png" alt="USA flag" class="supplier-flag" />
+                <div>
+                  <div class="supplier-country">United States</div>
+                  <div class="supplier-url">shopname.ae</div>
+                </div>
+              </div>
+              <div class="supplier-item">
+                <img src="assets/Layout1/Image/flags/RU@2x.png" alt="Russia flag" class="supplier-flag" />
+                <div>
+                  <div class="supplier-country">Russia</div>
+                  <div class="supplier-url">shopname.ru</div>
+                </div>
+              </div>
+              <div class="supplier-item">
+                <img src="assets/Layout1/Image/flags/IT@2x.png" alt="Italy flag" class="supplier-flag" />
+                <div>
+                  <div class="supplier-country">Italy</div>
+                  <div class="supplier-url">shopname.it</div>
+                </div>
+              </div>
+              <div class="supplier-item">
+                <img src="assets/Layout1/Image/flags/DK@2x.png" alt="Denmark flag" class="supplier-flag" />
+                <div>
+                  <div class="supplier-country">Denmark</div>
+                  <div class="supplier-url">denmark.com.dk</div>
+                </div>
+              </div>
+              <div class="supplier-item">
+                <img src="assets/Layout1/Image/flags/FR@2x.png" alt="France flag" class="supplier-flag" />
+                <div>
+                  <div class="supplier-country">France</div>
+                  <div class="supplier-url">shopname.com.fr</div>
+                </div>
+              </div>
+            
+              <div class="supplier-item">
+                <img src="assets/Layout1/Image/flags/CN@2x.png" alt="China flag" class="supplier-flag" />
+                <div>
+                  <div class="supplier-country">China</div>
+                  <div class="supplier-url">shopname.ae</div>
+                </div>
+              </div>
+              <div class="supplier-item">
+                <img src="assets/Layout1/Image/flags/GB@2x.png" alt="UK flag" class="supplier-flag" />
+                <div>
+                  <div class="supplier-country">Great Britain</div>
+                  <div class="supplier-url">shopname.co.uk</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- NEWSLETTER SECTION -->
+        <section class="newsletter-section">
+          <div class="container">
+            <div class="newsletter-content">
+              <h2 class="newsletter-title">Subscribe on our newsletter</h2>
+              <p class="newsletter-desc">Get daily news on upcoming offers from many suppliers all over the world</p>
+              <div class="newsletter-form">
+                <div class="newsletter-input-wrap">
+                  <span class="newsletter-icon">✉️</span>
+                  <input type="email" class="newsletter-input" placeholder="Email" />
+                </div>
+                <button class="newsletter-btn">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="footer-logo-icon">🛒</div>
+              <span>Brand</span>
+            </div>
+            <p class="footer-desc">Best information about the company gies here but now lorem ipsum is</p>
+            <div class="footer-social">
+              <a href="#" class="social-icon">📘</a>
+              <a href="#" class="social-icon">🐦</a>
+              <a href="#" class="social-icon">💼</a>
+              <a href="#" class="social-icon">📷</a>
+              <a href="#" class="social-icon">📺</a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">About</h3>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Find store</a></li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Partnership</h3>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Find store</a></li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Information</h3>
+            <ul class="footer-links">
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Money Refund</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">For users</h3>
+            <ul class="footer-links">
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Register</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">My Orders</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Get app</h3>
+            <div class="footer-apps">
+              <a href="#" class="app-btn">
+                <span class="app-icon">▶️</span>
+                <div>
+                  <div class="app-label">GET IT ON</div>
+                  <div class="app-name">Google Play</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copyright">© 2023 Ecommerce.</div>
+          <div class="footer-lang">
+            <span>English</span>
+            <span>🇺🇸</span>
+            <span>▲</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ===== MOBILE MENU SIDEBAR ===== -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+  <div class="mobile-menu-sidebar" id="mobile-menu-sidebar">
+    <div class="mobile-menu-header">
+      <div class="mobile-menu-user">
+        <div class="mobile-user-icon">👤</div>
+        <div class="mobile-user-text">Sign in | Register</div>
+      </div>
+      <button class="mobile-menu-close" id="mobile-menu-close">✕</button>
+    </div>
+    
+    <div class="mobile-menu-section">
+      <a href="index.html" class="mobile-menu-item">
+        <span class="mobile-menu-icon">🏠</span>
+        <span>Home</span>
+      </a>
+      <a href="categories-gridview.html" class="mobile-menu-item">
+        <span class="mobile-menu-icon">☰</span>
+        <span>Categories</span>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span class="mobile-menu-icon">❤️</span>
+        <span>Favorites</span>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span class="mobile-menu-icon">🗑️</span>
+        <span>My orders</span>
+      </a>
+    </div>
+
+    <div class="mobile-menu-divider"></div>
+
+    <div class="mobile-menu-section">
+      <a href="#" class="mobile-menu-item">
+        <span class="mobile-menu-icon">🌐</span>
+        <span>English | USD</span>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span class="mobile-menu-icon">🎧</span>
+        <span>Contact us</span>
+      </a>
+      <a href="#" class="mobile-menu-item">
+        <span class="mobile-menu-icon">🏢</span>
+        <span>About</span>
+      </a>
+    </div>
+
+    <div class="mobile-menu-divider"></div>
+
+    <div class="mobile-menu-section mobile-menu-footer">
+      <a href="#" class="mobile-menu-link">User agreement</a>
+      <a href="#" class="mobile-menu-link">Partnership</a>
+      <a href="#" class="mobile-menu-link">Privacy policy</a>
+    </div>
+  </div>
+</body>
+</html>
