@@ -165,16 +165,20 @@ if (addToCartBtn) {
     const size = productSize ? productSize.value : '';
     const quantity = quantityInput ? quantityInput.value : 1;
     
-    if (productSize && !size) {
-      if (cartMessage) {
-        cartMessage.textContent = 'Please select a size';
-        cartMessage.className = 'cart-message error';
-        setTimeout(() => {
-          cartMessage.textContent = '';
-          cartMessage.className = 'cart-message';
-        }, 3000);
+    // Only require size if size selector exists, has multiple options (more than just "Select Size"), and size is not selected
+    if (productSize && productSize.options.length > 1) {
+      const hasNonEmptyOptions = Array.from(productSize.options).some(opt => opt.value && opt.value !== '');
+      if (hasNonEmptyOptions && !size) {
+        if (cartMessage) {
+          cartMessage.textContent = 'Please select a size';
+          cartMessage.className = 'cart-message error';
+          setTimeout(() => {
+            cartMessage.textContent = '';
+            cartMessage.className = 'cart-message';
+          }, 3000);
+        }
+        return;
       }
-      return;
     }
 
     // Get product information from the page
@@ -272,4 +276,156 @@ searchButtons.forEach(searchBtn => {
     console.log('Category:', searchSelect ? searchSelect.value : 'All');
   });
 });
+
+// ===== CART PAGE FUNCTIONALITY =====
+
+function renderCartItems() {
+  const cartItemsContainer = document.querySelector('.cart-items');
+  if (!cartItemsContainer) return;
+
+  const cart = getCartItems();
+  const cartTitle = document.querySelector('.cart-title');
+  
+  // Get the cart-bottom-actions and cart-services sections (if they exist) before modifying
+  const bottomActions = cartItemsContainer.querySelector('.cart-bottom-actions');
+  const cartServices = cartItemsContainer.querySelector('.cart-services');
+  const existingBottomActions = bottomActions ? bottomActions.outerHTML : '';
+  const existingServices = cartServices ? cartServices.outerHTML : '';
+  
+  if (cart.length === 0) {
+    if (cartTitle) cartTitle.textContent = 'My cart (0)';
+    const emptyCartHTML = `
+      <div style="text-align: center; padding: 60px 20px;">
+        <h2 style="margin-bottom: 20px;">Your cart is empty</h2>
+        <a href="index.html" style="color: #1C1C1C; text-decoration: underline;">Continue shopping</a>
+      </div>
+    `;
+    cartItemsContainer.innerHTML = emptyCartHTML + existingBottomActions + existingServices;
+    updateCartSummary([]);
+    return;
+  }
+
+  // Calculate total items (sum of quantities)
+  const totalItems = cart.reduce((sum, item) => sum + parseInt(item.quantity || 1), 0);
+  if (cartTitle) cartTitle.textContent = `My cart (${totalItems})`;
+
+  const cartItemsHTML = cart.map((item, index) => {
+    const itemPrice = parseFloat(item.price.replace(/[^0-9.]/g, '')) || 0;
+    const itemQuantity = parseInt(item.quantity) || 1;
+    const totalPrice = (itemPrice * itemQuantity).toFixed(2);
+    
+    // Generate quantity options
+    const quantityOptions = Array.from({ length: 20 }, (_, i) => i + 1)
+      .map(qty => `<option value="${qty}" ${qty === itemQuantity ? 'selected' : ''}>${qty}</option>`)
+      .join('');
+
+    return `
+      <div class="cart-item" data-item-id="${item.id}">
+        <img src="${item.image}" alt="${item.name}" class="cart-item-image" />
+        <div class="cart-item-details">
+          <div class="cart-item-name">${item.name}</div>
+          <div class="cart-item-attributes">Size: ${item.size || 'N/A'}, Color: ${item.color || 'N/A'}, Material: ${item.material || 'N/A'}</div>
+          <div class="cart-item-seller">Seller: ${item.seller}</div>
+          <div class="cart-item-actions">
+            <a href="#" class="cart-action-remove" data-item-id="${item.id}">Remove</a>
+            <a href="#" class="cart-action-save">Save for later</a>
+          </div>
+        </div>
+        <div class="cart-item-qty">
+          <label>Qty:</label>
+          <select class="cart-qty-select" data-item-id="${item.id}">
+            ${quantityOptions}
+          </select>
+        </div>
+        <div class="cart-item-price">$${totalPrice}</div>
+      </div>
+    `;
+  }).join('');
+
+  // Insert cart items before bottom actions or services
+  cartItemsContainer.innerHTML = cartItemsHTML + existingBottomActions + existingServices;
+
+  // Add event listeners for remove buttons
+  const removeButtons = cartItemsContainer.querySelectorAll('.cart-action-remove');
+  removeButtons.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const itemId = this.getAttribute('data-item-id');
+      const updatedCart = removeFromCart(itemId);
+      renderCartItems();
+    });
+  });
+
+  // Add event listeners for quantity selects
+  const quantitySelects = cartItemsContainer.querySelectorAll('.cart-qty-select');
+  quantitySelects.forEach(select => {
+    select.addEventListener('change', function() {
+      const itemId = this.getAttribute('data-item-id');
+      const quantity = this.value;
+      updateCartQuantity(itemId, quantity);
+      renderCartItems();
+    });
+  });
+
+  // Handle remove all button
+  const removeAllBtn = cartItemsContainer.querySelector('.cart-remove-all');
+  if (removeAllBtn) {
+    removeAllBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (confirm('Are you sure you want to remove all items from your cart?')) {
+        saveCartItems([]);
+        renderCartItems();
+      }
+    });
+  }
+
+  updateCartSummary(cart);
+}
+
+function updateCartSummary(cart) {
+  // Find the subtotal row (first summary-row that's not discount, tax, or total)
+  const summaryRows = document.querySelectorAll('.summary-row');
+  let subtotalEl = null;
+  let totalEl = null;
+  
+  summaryRows.forEach(row => {
+    if (!row.classList.contains('discount') && 
+        !row.classList.contains('tax') && 
+        !row.classList.contains('total')) {
+      subtotalEl = row.querySelector('span:last-child');
+    }
+    if (row.classList.contains('total')) {
+      totalEl = row.querySelector('span:last-child');
+    }
+  });
+  
+  if (cart.length === 0) {
+    if (subtotalEl) subtotalEl.textContent = '$0.00';
+    if (totalEl) totalEl.textContent = '$0.00';
+    return;
+  }
+
+  let subtotal = 0;
+  cart.forEach(item => {
+    const itemPrice = parseFloat(item.price.replace(/[^0-9.]/g, '')) || 0;
+    const itemQuantity = parseInt(item.quantity) || 1;
+    subtotal += itemPrice * itemQuantity;
+  });
+
+  const discount = 60.00; // Fixed discount for now
+  const tax = 14.00; // Fixed tax for now
+  const total = subtotal - discount + tax;
+
+  if (subtotalEl) subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+  if (totalEl) totalEl.textContent = `$${total.toFixed(2)}`;
+}
+
+// Initialize cart page on load
+if (document.querySelector('.cart-items')) {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderCartItems);
+  } else {
+    renderCartItems();
+  }
+}
 
